@@ -11,32 +11,32 @@
                 @Html.AntiForgeryToken() <!-- per sicurezza dei dati-->
                 <div class="mb-3">
                     <label>Titolo:</label>
-                    <input asp-for="Name" type="text" class="form-control">
+                    <input asp-for="Name" id="Name" type="text" class="form-control">
                     <span asp-validation-for="Name" class="text-danger"></span>
 
                 </div>
                 <div class="mb-3">
                     <label>Descrizione:</label>
-                    <textarea asp-for="Description" rows="10" class="d-block w-100"></textarea>
+                    <textarea asp-for="Description" id="Description" rows="10" class="d-block w-100"></textarea>
                     <span asp-validation-for="Description" class="text-danger"></span>
 
                 </div>
                 <div class="mb-3">
                     <label>Path Image:</label>
-                    <input asp-for="ImageUrl" type="text" class="form-control">
+                    <input asp-for="ImageUrl" id="ImageUrl" type="text" class="form-control">
                     <span asp-validation-for="ImageUrl" class="text-danger"></span>
 
                 </div>
 
                 <div class="mb-3">
                     <label> Destination</label>
-                    <input asp-for="Destinations" type="text" class="form-control">
+                    <input asp-for="Destinations" id="Destinations" type="text" class="form-control">
                     <span asp-validation-for="Destinations" class="text-danger"></span>
                 </div>
 
                  <div class="mb-3">
                     <label>Price:</label>
-                    <input asp-for="Price" type="text" class="form-control">
+                    <input asp-for="Price" id="Price" type="text" class="form-control">
                     <span asp-validation-for="Price" class="text-danger"></span>
 
                 </div>
@@ -53,6 +53,26 @@
                 </div>
             </form>
         </div>
-        </divc>
-    </div>
 
+        <div class="col-6">
+            
+            <div class="col-11 col-md-5 me-4 col-xl-3 shadow p-3 mb-5 bg-body rounded px-0 py-0">
+                <img id="Demo-ImageUrl" src="" alt="img" class="img-fluid">
+                <h4 id="Demo-Name" class="bg-warning py-2">Name</h4>
+
+                <p id="Demo-Description" class="p-3">Description</p>
+
+                <h6 class="border-top text-warning py-2 "><strong id="Demo-Day-Destinations"> days - destinations</strong></h6>
+
+                <p><strong id="Demo-Price"></strong>/person</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function stups()
+    {
+        var 
+    }
+</script>
