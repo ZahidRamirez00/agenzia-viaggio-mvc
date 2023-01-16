@@ -89,5 +89,14 @@ namespace Agenzia_viaggio_mvc.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        public IActionResult ChiSiamo()
+        {
+            return View();
+        }
+
+
+
+
     }
 }
