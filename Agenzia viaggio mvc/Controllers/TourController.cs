@@ -8,5 +8,8 @@ namespace Agenzia_viaggio_mvc.Controllers
         {
             return View();
         }
+        public IActionResult Details() { 
+        return View();
+        }
     }
 }
