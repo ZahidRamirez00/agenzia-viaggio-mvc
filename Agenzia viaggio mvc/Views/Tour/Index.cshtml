@@ -21,12 +21,12 @@
             {
 
             <div class="col-11 col-md-5 me-4 col-xl-3 shadow p-3 mb-5 bg-body rounded px-0 py-0">
-                <img src=" https://picsum.photos/id/1061/300/300" alt="" class="img-fluid">
-                <h4 class="bg-warning text-white py-2">@elemento.Title</h4>
+                <img src="@elemento.ImageUrl" alt="" class="img-fluid">
+                <h4 class="bg-warning @elemento.ColorCard py-2">@elemento.Name</h4>
 
                 <p class="p-3">@elemento.Description</p>
 
-                <h6 class="border-top text-warning py-2 "><strong>@elemento.Destination</strong></h6>
+                <h6 class="border-top text-warning py-2 "><strong>@elemento.Days days/-@elemento.Destination /destinations</strong></h6>
 
                 <p><strong>@elemento.Price</strong>/person</p>
             </div>
