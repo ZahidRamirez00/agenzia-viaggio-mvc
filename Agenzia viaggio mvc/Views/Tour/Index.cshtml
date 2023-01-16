@@ -11,6 +11,11 @@
     </p>
     </div>
 
+    <a class="btn btn-primary"
+       href="@Url.Action("Create", "Tour")">
+        Aggiungi Nuovo Articolo
+    </a>
+
     <div class="container">
 
         <div class="row justify-content-center">
@@ -18,7 +23,7 @@
             @foreach(Tour elemento in Model)
             {
 
-            <div class="col-11 col-md-5 me-4 col-xl-3 shadow p-3 mb-5 bg-body rounded px-0 py-0">
+            <div class="col-11 col-md-5 me-4 col-xl-3 shadow p-3 mb-5 bg-body rounded px-0 py-0 g-3">
                 <img src="@elemento.ImageUrl" alt="" class="img-fluid">
                 <h4 class="bg-warning @elemento.ColorCard py-2">@elemento.Name</h4>
 
@@ -27,6 +32,13 @@
                 <h6 class="border-top text-warning py-2 "><strong>@elemento.Days days/-@elemento.Destinations /destinations</strong></h6>
 
                 <p><strong>@elemento.Price</strong>/person</p>
+
+
+                 <a class="btn btn-warning btn-sm mb-1" href="@Url.Action("Details", "Tour", new { id = elemento.TourId })"> Details </a>
+
+                        <a class="btn btn-warning btn-sm modifyBtn mb-1" href="@Url.Action("Update", "Tour", new { id = elemento.TourId })"> Modify </a>
+
+                        <form asp-controller="Tour" asp-action="Delete" asp-route-id="@elemento.TourId" method="post" class="buttonForm btn btn-warning btn-sm mb-1"><a type="submit"> Delete </a></form>
             </div>
             }
         </div>

@@ -24,6 +24,7 @@ namespace Agenzia_viaggio_mvc.Models
             Destinations = destinations;
             ImageUrl = imageUrl;
             ColorCard = colorCard;
+
         }
     }
 }
