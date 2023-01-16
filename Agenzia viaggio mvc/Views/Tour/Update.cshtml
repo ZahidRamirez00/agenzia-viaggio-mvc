@@ -12,8 +12,8 @@
                 @Html.AntiForgeryToken() <!-- per sicurezza dei dati-->
                 <div class="mb-3">
                     <label>Titolo:</label>
-                    <input asp-for="Title" type="text" class="form-control">
-                    <span asp-validation-for="Title" class="text-danger"></span>
+                    <input asp-for="Name" type="text" class="form-control">
+                    <span asp-validation-for="Name" class="text-danger"></span>
 
                 </div>
                 <div class="mb-3">
@@ -24,8 +24,8 @@
                 </div>
                 <div class="mb-3">
                     <label>Path Image:</label>
-                    <input asp-for="Image" type="text" class="form-control">
-                    <span asp-validation-for="Image" class="text-danger"></span>
+                    <input asp-for="ImageUrl" type="text" class="form-control">
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
 
                 </div>
 
@@ -41,7 +41,12 @@
                     <span asp-validation-for="Price" class="text-danger"></span>
 
                 </div>
+                <div class="mb-3">
+                    <label>Price:</label>
+                    <input asp-for="Days" type="text" class="form-control">
+                    <span asp-validation-for="Days" class="text-danger"></span>
 
+                </div>
 
 
                 <div class="text-end">
@@ -51,3 +56,4 @@
         </div>
         </divc>
     </div>
+
