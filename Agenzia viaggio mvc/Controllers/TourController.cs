@@ -9,9 +9,9 @@ namespace Agenzia_viaggio_mvc.Controllers
     {
         public IActionResult Index() {
             using AgenziaContext db = new ();
-            List<Tour> listaDellePizze = db.Tours.ToList();
+            List<Tour> listaDeiTour = db.Tours.ToList();
 
-            return View("Index", listaDellePizze);
+            return View("Index", listaDeiTour);
         }
         public IActionResult Details(int id) {
             using AgenziaContext db = new();
