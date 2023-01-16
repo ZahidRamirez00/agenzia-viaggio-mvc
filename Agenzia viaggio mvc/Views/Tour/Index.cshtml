@@ -23,7 +23,7 @@
             @foreach(Tour elemento in Model)
             {
 
-            <div class="col-11 col-md-5 me-4 col-xl-3 shadow p-3 mb-5 bg-body rounded px-0 py-0 g-3 p-2">
+            <div class="col-11 col-md-5 me-4 col-xl-3 shadow p-3 mb-5 bg-body rounded px-0 py-0 g-3">
                 <img src="@elemento.ImageUrl" alt="" class="img-fluid">
                 <h4 class="bg-warning @elemento.ColorCard py-2">@elemento.Name</h4>
 
@@ -34,11 +34,11 @@
                 <p><strong>@elemento.Price</strong>/person</p>
 
 
-                 <a class="btn btn-warning btn-sm" href="@Url.Action("Details", "Tour", new { id = elemento.TourId })"> Details </a>
+                 <a class="btn btn-warning btn-sm mb-1" href="@Url.Action("Details", "Tour", new { id = elemento.TourId })"> Details </a>
 
-                        <a class="btn btn-warning btn-sm modifyBtn" href="@Url.Action("Update", "Tour", new { id = elemento.TourId })"> Modify </a>
+                        <a class="btn btn-warning btn-sm modifyBtn mb-1" href="@Url.Action("Update", "Tour", new { id = elemento.TourId })"> Modify </a>
 
-                        <form asp-controller="Tour" asp-action="Delete" asp-route-id="@elemento.TourId" method="post" class="buttonForm btn btn-warning btn-sm"><a type="submit"> Delete </a></form>
+                        <form asp-controller="Tour" asp-action="Delete" asp-route-id="@elemento.TourId" method="post" class="buttonForm btn btn-warning btn-sm mb-1"><a type="submit"> Delete </a></form>
             </div>
             }
         </div>
